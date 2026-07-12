@@ -59,3 +59,30 @@ border:none;
 padding:10px 20px;
 border-radius:5px;
 }
+.hero{
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.hero h1{
+    font-size:32px;
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#ccc;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    background:#00e5ff;
+    color:#000;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+}
