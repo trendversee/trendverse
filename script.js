@@ -45,3 +45,31 @@ if (subscribeBtn) {
     alert("Thanks for subscribing to TrendVerse!");
   });
 }
+// Search Box Elements
+const searchInput = document.querySelector('.search-box');
+const exploreBtn = document.querySelector('.hero button');
+const articles = document.querySelectorAll('.article');
+
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    articles.forEach(article => {
+        const title = article.querySelector('h3').innerText.toLowerCase();
+        const description = article.querySelector('p').innerText.toLowerCase();
+        
+        // Agar title ya description mein search term match hota hai, toh dikhao, nahi toh chhupa do
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            article.style.display = "block";
+        } else {
+            article.style.display = "none";
+        }
+    });
+}
+
+// Button click par search chalega
+exploreBtn.addEventListener('click', performSearch);
+
+// Keyboard par Enter hit karne par bhi search chalega
+searchInput.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') performSearch();
+});
