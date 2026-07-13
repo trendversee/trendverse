@@ -222,4 +222,10 @@ transition:.3s;
 .btn:hover{
 transform:scale(1.05);
 background:#00c4dd;
+} .card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
 }
